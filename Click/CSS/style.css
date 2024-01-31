@@ -14,6 +14,8 @@ body{
     color: white;
     cursor: pointer;
     transition: all .3s ease;
+    margin-bottom: 40px;
+    margin-top:100px;
 }
 
 #button-reset{
@@ -24,6 +26,8 @@ body{
     color: white;
     cursor: pointer;
     transition: all .3s ease;
+    margin-top: 40px;
+    margin-right: 0px;
 }
 
 .buttons{
@@ -32,12 +36,11 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     gap: 16px;
-
 }
 
 span {
     filter: brightness(90%);
-    color: #bf0221;
+    color: #ffffffef;
 }
 
 
@@ -66,8 +69,77 @@ span {
 
 .seccion-oculta-10{
     display: none;
+    background-color: #83797b;
+    padding: 30px 40px 240px 40px;
+    margin-bottom: 40px;
 }
 
+.seccion-oculta-10 p{
+    text-align: center;
+    font-size: 140%;
+    line-height: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+
+/*Boton de click*/
+.boton-inicio{
+    width: 100%;
+    padding: 130px 100px 130px 80px;
+    text-align: center;
+    background-color: darkolivegreen;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.boton-inicio:hover{
+    color: white;
+    background-color: green;
+}
+/*Fin del boton de click*/
+
+/*Contador*/
+#counter{ 
+ justify-content: center;
+ display: flex;
+ font-weight: bold;
+ font-size: 120%;
+ background-color: rgb(42, 209, 54);
+ border-radius: 40%;
+ color: white;
+ height: 100px;
+ width: 100px;
+ position: relative;
+ top: -30px;
+ left: 90px;
+ /* animation: counter 10s linear infinite; */
+ /* transform: rotate(-90deg) translateX(-100%); */ 
+ align-items: center;
+ /* padding-bottom: -2px; */
+}
+
+.nev{
+    font-size: 24px;
+    text-decoration: none;
+    padding: 8px 26px;
+    border: none;
+    background-color: #0d6c03b4;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-top: 40px;
+    margin-right: 800px;
+}
+
+/* #nev, #button-reset{
+
+    justify-content: space-between;
+
+} */
 
 
 /* body {
