@@ -136,6 +136,11 @@ span {
     margin-right: 800px;
 }
 
+.nev:hover{
+    background-color:#539e53;
+    opacity: 2;
+}
+
 /* #nev, #button-reset{
 
     justify-content: space-between;
