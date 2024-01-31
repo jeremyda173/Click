@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../Image/kisspng-liberal-contabilidade-do-brasil-ltda-accounting-l-escrita-5b4845fd1ca037.4460512215314631651173.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="/Click/CSS/style.css">
-    <title>Contador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/Click/CSS/style.css">
+  <title>Contador de Clicks</title>
 </head>
 <body>
-  <div class="button"><button id="myButton">Toca aquí</button></div> 
-<p id="counter">0</p>
-    <script src="/Click/src/kk.js"></script>
+
+  <div class="click">
+      <h1 class="title">Selecciona una opcion para empezar:</h1>
+
+        <div class="buttons">
+          <button type="button" id="button-10" class="button">10 segs</button>
+          <button type="button" id="button-15" class="button">15 segs</button>
+        </div>
+
+       <!--Opciónn 1-->
+    <div id="cont-click-10" class="seccion-oculta-10">
+      <!-- Contenido de la sección -->
+      <p>¡Hola! Has elegido la opción de <span>10 segs</span>.</p>
+      <label for="numero_intentos">Número de clicks: <p id="counter">0</p></label>
+      
+      
+       <button onclick="startCount('10')" id="button-click" class="boton-inicio">Iniciar Conteo</button>
+      
+    <!--  <button onclick="reiniciar()" type="reset" id="button-reset" class="button-reset">Reiniciar contador</button> -->
+    </div>
+
+
+      <!-- Opciónn 2
+    <div id="cont-click-15" class="seccion-oculta-15">
+      Contenido de la sección
+      <p>¡Hola! Has elegido la opción de <span>15 segs</span>.</p>
+      <label for="numero-clicks" class="clicks-num">Número de clicks realizados:</label><br>
+      <input readonly type="number" id="numero-clicks"><br>
+      
+      <button onclick="reiniciar()" type="reset" id="button-reset" class="button-reset">Reiniciar contador</button>
+    </div> -->
+
+  </div>
+
+
+
+
+
+
+  <!-- <div id="counter-container">
+    <p id="counter">0</p>
+    <button id="click-btn" onclick="incrementCounter()">¡Haz clic!</button>
+    <p id="timer">Tiempo: <span id="seconds">0</span> segundos</p>
+  
+    <div>
+      <label for="countLimit1">Límite de tiempo (segundos) para llegar a 10:</label>
+      <input type="number" id="countLimit1" min="1" value="10">
+    </div>
+  
+    <div>
+      <label for="countLimit2">Límite de tiempo (segundos) para llegar a 5:</label>
+      <input type="number" id="countLimit2" min="1" value="5">
+    </div>
+  </div> -->
+
+<script src="/Click/src/kk.js"></script>
+
 </body>
 </html>
