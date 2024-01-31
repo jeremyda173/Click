@@ -1,43 +1,101 @@
-body {
-    background-color: #f4f4f4;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 20px 40px;
-    font-size: 18px;
+#button-10, #button-15{
+    font-size: 24px;
+    padding: 8px 36px;
     border: none;
+    background-color: #631593;
+    color: white;
     cursor: pointer;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all .3s ease;
 }
 
-button:hover {
-    background-color: #2980b9;
+#button-reset{
+    font-size: 24px;
+    padding: 8px 26px;
+    border: none;
+    background-color: #bf0221;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
-.counter-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.buttons{
+    margin-top: 24px;
     text-align: center;
-}
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
 
-p {
-    font-size: 3em;
-    color: #333;
-    margin: 10px 0;
 }
 
 span {
-    font-size: 1.2em;
-    color: #555;
+    filter: brightness(90%);
+    color: #bf0221;
 }
+
+
+#button-10:hover{
+    filter: brightness(90%);
+    background-color: rgb(121, 121, 121);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#button-15:hover{
+    filter: brightness(90%);
+    background-color: rgb(121, 121, 121);
+}
+
+#button-reset:hover{
+    filter: brightness(90%);
+    background-color: rgb(121, 121, 121);
+}
+
+.clicks-num{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+}
+
+.seccion-oculta-10{
+    display: none;
+}
+
+
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  #counter-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #counter {
+    font-size: 3em;
+    color: #333;
+  }
+  
+  #click-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+   */
