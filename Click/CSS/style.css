@@ -127,6 +127,7 @@ span {
     text-decoration: none;
     padding: 8px 26px;
     border: none;
+    border-radius: 10px;
     background-color: #0d6c03b4;
     color: white;
     cursor: pointer;
