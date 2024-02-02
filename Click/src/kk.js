@@ -9,26 +9,74 @@ document.getElementById("button-10").addEventListener("click", function () {
   } else {
       clickA.style.display = "none";
   }
+});
 
-})
-
-// Obtener referencias a los elementos del DOM
 var button = document.getElementById('button-click');
 var counter = document.getElementById('counter');
+var resetButton = document.getElementById('button-reset');
+var secondsCounter = document.getElementById('contador-segs');
 
-// Variable para almacenar la cantidad de clics
 var count = 0;
+var secondsCountValue = 0;
+var interval;
 
-// Función para manejar el evento de clic
-function handleClick() {
-  // Incrementar el contador en 1
-  count++;
-  // Actualizar el contenido del elemento "counter" con el valor del contador
+var isCounterActive = false;
+
+button.addEventListener('click', function() {
+  if (!isCounterActive) {
+    isCounterActive = true;
+    iniciarConteo();
+  }
+  
+  if (secondsCountValue < 10) {
+    count++;
+    counter.textContent = count;
+  }
+});
+
+resetButton.addEventListener('click', function () {
+  clearInterval(interval);
+  isCounterActive = false;
+  count = 0;
+  secondsCountValue = 0;
   counter.textContent = count;
+  secondsCounter.textContent = secondsCountValue;
+});
+
+function iniciarConteo() {
+  count = 0;
+  secondsCountValue = 0;
+
+  interval = setInterval(function(){
+    secondsCountValue++;
+    secondsCounter.textContent = secondsCountValue;
+
+    if (secondsCountValue === 10){
+      clearInterval(interval);
+      alert('¡Has completado el desafío! Has tardado ' + secondsCountValue + ' segundos en hacer ' + count + ' clic(s) en el botón.');
+      resetButton.click(); // Reiniciar el contador después de mostrar la alerta
+    }
+  }, 1000);
 }
 
-// Asociar la función de clic al evento de clic del botón
-button.addEventListener('click', handleClick);
+
+
+// let contadorSegundos = 0
+// let intervalo;
+
+// function contadorSegundos() { 
+//  intervalo = setInterval(function(){
+//   contadorSegundos++
+//   actualizarSegundos()
+//  }, 1000)
+// }
+
+// function segundos(){
+//     let fecha = new Date()
+//     let horaActual = fecha.getHours() + ':'+ fecha.getMinutes() + ':' + fecha.getSeconds();
+//     document.write(horaActual)
+// }
+
 
 // document.getElementById("button-15").addEventListener("click", function () {
 //   var clickB = document.getElementById("cont-click-15");
