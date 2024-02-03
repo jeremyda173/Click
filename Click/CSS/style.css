@@ -45,6 +45,20 @@ span {
     font-weight: bold;
 }
 
+.text-p span {
+    text-decoration: underline;
+}
+
+/* .text-p h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    letter-spacing: -1px;
+    line-height: 1.7;
+    max-width: 60ch;
+    margin: 0 auto;
+    margin-bottom: 24px;
+} */
+
 #button-10:hover{
     filter: brightness(90%);
     background-color: rgb(121, 121, 121);
@@ -135,7 +149,7 @@ span {
 /* Contador */
 #contador-segs-container {
     text-align: center;
-  }
+}
   
   #contador-segs {
     display: flex;
@@ -147,17 +161,19 @@ span {
     height: 100px;
     width: 200px;
     position: relative;
-    top: 20px; /* Adjusted positioning for better alignment */
+    top: 85px; /* Adjusted positioning for better alignment */
+    left: 910px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
 }
+
 #text-segs {
     margin-right: 5px; /* Espacio entre el número y el texto */
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 198px;
+    top: 168px;
     left: 100px;
     font-weight: bold;
     margin-top: 20px;
