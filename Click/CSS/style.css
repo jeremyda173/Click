@@ -31,6 +31,19 @@ body{
     margin-right: 0px;
 }
 
+#button-reset-2{
+    font-size: 24px;
+    padding: 8px 26px;
+    border: none;
+    background-color: #bf0221;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-top: 40px;
+    margin-right: 0px;
+}
+
 .buttons{
     margin-top: 24px;
     text-align: center;
@@ -104,6 +117,28 @@ span {
     margin-bottom: 20px;
 }
 
+.seccion-oculta-15 {
+    display: none;
+    background-color: #e1e1e1;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center; /* Center-align the text within the section */
+}
+
+/* Paragraph styles within the hidden section */
+.seccion-oculta-15 p {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0; /* Adjusted margin for better spacing */
+}
+
+/* Heading styles within the hidden section */
+.seccion-oculta-15 h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 
 
 /*Boton de click*/
@@ -146,12 +181,49 @@ span {
  /* padding-bottom: -2px; */
 }
 
+#counter-2{ 
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 120%;
+    background-color: rgb(42, 209, 54);
+    border-radius: 40%;
+    color: white;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: -30px;
+    left: 90px;
+    /* animation: counter 10s linear infinite; */
+    /* transform: rotate(-90deg) translateX(-100%); */ 
+    align-items: center;
+    /* padding-bottom: -2px; */
+   }
+
+   #contador-segs-2{
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgb(2, 184, 212);
+    border-radius: 10%;
+    color: white;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    top: 85px; /* Adjusted positioning for better alignment */
+    left: 910px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+   
+
 /* Contador */
 #contador-segs-container {
     text-align: center;
 }
   
-  #contador-segs {
+#contador-segs {
     display: flex;
     font-weight: bold;
     font-size: 1.2em;
