@@ -34,4 +34,13 @@ function incrementClicks() {
   clickCount++;
   var clickCountSpan = document.getElementById('click-count');
   clickCountSpan.textContent = clickCount;
+
+  // Calcular CPS (Clics por segundo)
+  var cps = (clickCount / (secondsCount - secondsCount % 60)).toFixed(2);
+  var cpsSpan = document.getElementById('cps');
+  cpsSpan.textContent = cps;
+}
+
+function startChallenge(seconds) {
+  showContainer(seconds);
 }
