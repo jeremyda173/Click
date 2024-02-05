@@ -11,23 +11,26 @@
   <div class="container">
       <h2 class="title">Desafíos de CPS</h2>
 
-      <div class="buttons">
-          <button type="button" class="button" onclick="showContainer(1)">1 SEGUNDO</button>
-          <button type="button" class="button" onclick="showContainer(2)">2 SEGUNDOS</button>
-          <button type="button" class="button" onclick="showContainer(5)">5 SEGUNDOS</button>
-          <button type="button" class="button" onclick="showContainer(10)">10 SEGUNDOS</button>
-          <button type="button" class="button" onclick="showContainer(30)">30 SEGUNDOS</button>
-          <button type="button" class="button" onclick="showContainer(60)">60 SEGUNDOS</button>
-      </div>
-
-      <div id="result-container" class="hidden">
-          <div id="click-area-container" onclick="incrementClicks()">
+      <div id="result-container">
+          <button id="click-area-container" onclick="incrementClicks()">
               <!-- Contenedor para la zona de clics -->
               <p>¡Haz clic aquí!</p>
-              <p>Contador de Clics: <span id="click-count">0</span></p>
+              <p>Clics: <span id="click-count">0</span></p>
+          </button>
+          <!-- Contadores de Puntaje y Temporizador -->
+          <div id="counters-container">
+              <p>CPS: <span id="cps">0</span></p>
+              <p>Temporizador: <span id="time">0</span></p>
           </div>
-          <!-- Contenido del contenedor principal -->
-          <p>Contador de Segundos: <span id="time"></span></p>
+      </div>
+
+      <div class="buttons">
+          <button type="button" class="button" onclick="startChallenge(1)">1 SEGUNDO</button>
+          <button type="button" class="button" onclick="startChallenge(2)">2 SEGUNDOS</button>
+          <button type="button" class="button" onclick="startChallenge(5)">5 SEGUNDOS</button>
+          <button type="button" class="button" onclick="startChallenge(10)">10 SEGUNDOS</button>
+          <button type="button" class="button" onclick="startChallenge(30)">30 SEGUNDOS</button>
+          <button type="button" class="button" onclick="startChallenge(60)">60 SEGUNDOS</button>
       </div>
   </div>
     
