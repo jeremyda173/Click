@@ -69,7 +69,7 @@ body {
 }
 
 #space-between {
-  height: 20px; /* Añadido espacio entre counters-container y click-area-container */
+  height: 20px; 
 }
 
 #click-area-container {
