@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../CSS/click.css">
     <title>Desafíos de CPS</title>
 </head>
-<>
+<body>
 
     <div class="container">
         <h2 class="title">Desafíos de CPS</h2>
-    
+
         <div class="buttons">
             <button type="button" class="button" onclick="startChallenge(1)">1 SEGUNDO</button>
             <button type="button" class="button" onclick="startChallenge(2)">2 SEGUNDOS</button>
@@ -18,16 +19,14 @@
             <button type="button" class="button" onclick="startChallenge(30)">30 SEGUNDOS</button>
             <button type="button" class="button" onclick="startChallenge(60)">60 SEGUNDOS</button>
         </div>
-    
+
         <div id="result-container">
-            <!-- Contenedor para la zona de clics y contadores -->
             <div id="counters-container">
-                <p>CPS: <span id="cps">0.00</span></p>
+                <p>CPS: <span id="cps">0</span></p>
                 <p>Temporizador: <span id="time">0</span></p>
             </div>
-    
+
             <button id="click-area-container" onclick="incrementClicks()">
-                <!-- Botón para el área de clics -->
                 <p>¡Haz clic aquí!</p>
                 <p>Clics: <span id="click-count">0</span></p>
             </button>
@@ -44,10 +43,13 @@
 
             clickCount = 0;
             document.getElementById('click-count').textContent = clickCount;
-            document.getElementById('cps').textContent = "0.00";
+            document.getElementById('cps').textContent = "";
 
             initialSeconds = sec;
             document.getElementById('time').textContent = initialSeconds;
+
+            // Pasar 'sec' a la función incrementClicks
+            incrementClicks(sec);
         }
 
         function stopTimer() {
@@ -55,7 +57,7 @@
             timer = null;
         }
 
-        function incrementClicks() {
+        function incrementClicks(sec) {
             if (initialSeconds > 0) {
                 clickCount++;
                 document.getElementById('click-count').textContent = clickCount;
@@ -63,12 +65,17 @@
                 if (!timer) {
                     timer = setInterval(function () {
                         initialSeconds--;
-                        document.getElementById('time').textContent = initialSeconds;
+                        document.getElementById('time').textContent = (initialSeconds >= 0) ? initialSeconds : "¡Tiempo agotado!";
 
                         if (initialSeconds === 0) {
                             stopTimer();
-                            const cps = clickCount / (initialSeconds + 1);
-                            document.getElementById('cps').textContent = cps.toFixed(2);
+
+                            // Calcular CPS utilizando el tiempo total del desafío ('sec')
+                            const cps = clickCount / sec;
+
+                            // Formatear y mostrar CPS
+                            const formattedCps = cps.toFixed(2);
+                            document.getElementById('cps').textContent = `${formattedCps} clics/seg`;
                         }
                     }, 1000);
                 }
@@ -77,7 +84,6 @@
             }
         }
     </script>
-    
+
 </body>
 </html>
-
