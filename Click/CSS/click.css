@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 900px; /* Reduced max-width to 600px */
+  max-width: 900px;
   margin: 50px auto;
   padding: 20px;
   background: linear-gradient(135deg, #333 0%, #555 100%);
@@ -57,8 +57,8 @@ body {
 #counters-container {
   display: flex;
   justify-content: space-around;
-  margin: 30px 0; /* Añadido espacio arriba y abajo de counters-container */
-  background: linear-gradient(135deg, #1f1f1f 0%, #333 100%); /* Cambiado el color a oscuro */
+  margin: 30px 0; 
+  background: linear-gradient(135deg, #1f1f1f 0%, #333 100%); 
   padding: 20px;
   border-radius: 15px;
 }
